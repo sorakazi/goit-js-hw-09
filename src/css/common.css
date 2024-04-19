@@ -32,7 +32,6 @@ img {
 }
 
 .btn-container button {
-  padding: 20px 20px;
   font-size: 26px;
   width: 20%;
 }
@@ -48,21 +47,23 @@ input {
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 input[type='text'] {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 25px; /* Adjust the font size as needed */
+  font-size: large;
+  justify-content: center;
+  height: 25px; /* Adjusted height to match the button */
+  width: 25%;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 button {
+  text-align: center;
   margin: 10px;
   height: 25px;
   width: 100px;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
-button[data-start] {
-  font-size: 20px; /* Adjust the font size as needed */
+button[data-start],
+button[data-stop] {
+  font-size: inherit; /* Inherit font size from the parent element */
   font-weight: bold;
 }
 
