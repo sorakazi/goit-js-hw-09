@@ -8,14 +8,14 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 // DOM
 const datetimePickerEl = document.querySelector('#datetime-picker');
-const startButtonEl = document.querySelector('button[data-start]');
+const startButton = document.querySelector('button[data-start]');
 const daysEl = document.querySelector('span[data-days]');
 const hoursEl = document.querySelector('span[data-hours]');
 const minutesEl = document.querySelector('span[data-minutes]');
 const secondsEl = document.querySelector('span[data-seconds]');
 
 // disable button by default
-startButtonEl.disabled = true;
+startButton.disabled = true;
 
 const options = {
   enableTime: true,
@@ -29,19 +29,19 @@ const options = {
 
     if (selectedDate < dateNow) {
       Notify.failure('Please choose a date in the future');
-      startButtonEl.disabled = true;
+      startButton.disabled = true;
       return;
     }
 
     // if the date is in the future -> enable the button
-    startButtonEl.disabled = false;
+    startButton.disabled = false;
 
     // Begin Countdown
     let timerID = null;
 
     // Countdown Handler
     function handleCountdown() {
-      startButtonEl.disabled = true;
+      startButton.disabled = true;
       datetimePickerEl.disabled = true;
 
       //   run every 1000 ms (1 second)
@@ -65,7 +65,7 @@ const options = {
         secondsEl.textContent = addLeadingZero(seconds);
       }, 1000);
     }
-    startButtonEl.addEventListener('click', handleCountdown);
+    startButton.addEventListener('click', handleCountdown);
   },
 };
 
