@@ -75,3 +75,12 @@ button[data-stop] {
   font-weight: 30px;
   gap: 25px;
 }
+
+/* Task 3 - promise generator */
+button[type='submit'] {
+  font-size: 10px; /* Inherit font size from the parent element */
+  font-weight: bolder;
+  /* You can add other styles if needed */
+  width: 120px; /* Adjust the width as needed */
+  box-sizing: border-box;
+}
